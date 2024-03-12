@@ -1,70 +1,12 @@
-# Getting Started with Create React App
+Menu Building App for Picky Kids
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Search Bar Component: Create a component where users can input ingredients or keywords to search for recipes.
+2. Recipe Display Component: Display search results in a visually appealing manner, showing recipe names, images, and maybe a brief description.
+3. API Integration: Integrate with a recipe API (such as Spoonacular or Edamam) to fetch recipe data based on user input.
+4. Filtering Options: Allow users to filter search results based on dietary preferences (e.g., vegetarian, vegan, gluten-free) or meal type (e.g., breakfast, lunch, dinner).
+5. Detail View Component: Implement a detail view for each recipe, displaying ingredients, cooking instructions, and any additional information.
+6. Favorite Recipes: Allow users to mark recipes as favorites and save them for future reference. You can use browser local storage or a simple backend database for this feature.
+7. Error Handling: Handle errors gracefully, such as displaying a message if no recipes match the search criteria or if there's an issue fetching data from the API.
+8. Responsive Design: Ensure that the app looks and functions well on different screen sizes, including desktops, tablets, and mobile devices.
+9. Styling: Use CSS or a CSS framework like Bootstrap to style the app and make it visually appealing.
+This project will give you hands-on experience with React fundamentals like component creation, state management, API integration, and conditional rendering. Plus, it's a practical application that you can use to search for and save recipes you're interested in trying out.
