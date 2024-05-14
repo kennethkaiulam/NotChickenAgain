@@ -1,36 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
-import ReactDOM from 'react-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { Card } from 'react-bootstrap';
+import {Container, Row, Col, Card} from 'react-bootstrap';
+import React, {useState, useEffect, fetchData } from "react";  
+import { SearchForm } from './Components/SearchForm';
 import axios from 'axios';
 
-const element = <FontAwesomeIcon icon= {faSearch} />
-
-function CallSpoonacular(event){
-  event.preventDefault();
-  axios.get('https://api.spoonacular.com/recipes/random?number=1')
-        .then(res => {
-          console.log(res.data);
-        })
-        .catch(e => console.error(e));
-}
-
 function App() {
+  const [recipes, setRecipes] = useState();
+
+
+function GetRecipes(formData){
+  const url = `https://api.spoonacular.com/recipes/complexSearch?number=5&addRecipeInformation=true&addRecipeInstructions=true&query=${formData.query}&cuisine=${formData.cuisine}`;
+  const apiKey = '6ff507c1222e497888ce49f33f474601';
+  axios.get(url, {
+    headers: {
+      'X-API-Key': apiKey,
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(response => {
+    // Handle successful response
+    console.log('Response:', response);
+    setRecipes(response.data);
+  })
+  .catch(error => {
+    // Handle error
+    console.error('Error:', error);
+  });
+};
+const handleFormChange = (newFormData) => {
+  GetRecipes(newFormData)
+};  
   return (
     <div className="App">
       <Container>
         <Row>
           <Col>
-          <form id="searchForm" onSubmit={CallSpoonacular}>
-            <label style={{border:"2px"}}> {element} </label>
-            <input type="text" name="ingredients" placeholder="Search"></input>
-            <button type="submit"> Submit </button>
-          </form>
+          <SearchForm onSubmit={handleFormChange}/>
+        
           </Col>
         </Row>
         </Container>
